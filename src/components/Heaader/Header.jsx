@@ -9,7 +9,7 @@ export default function Header () {
             <nav className="c-header__nav">
                 <NavLink className="c-header__nav--a" to="/">rgb clock</NavLink>
                 <NavLink className="c-header__nav--a" to="/countdown">countdown</NavLink>
-                <NavLink className="c-header__nav--a" to="/stopwatch">stopwatch</NavLink>
+                <NavLink className="c-header__nav--a" to="/stopwatch">chronometer</NavLink>
             </nav>
         </div>
     )

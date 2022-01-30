@@ -37,7 +37,7 @@ export default function DigitalClock () {
 
     
     return (
-        <div className="digitalclock animation">
+        <div className="digitalclock">
             <h4 className="digitalclock__title">RGB CLOCK</h4>
             <div className="digitalclock__clock">
             <span>{hours}</span>:<span>{minutes}</span><span className="digitalclock__clock-sec">{clockState}</span>
