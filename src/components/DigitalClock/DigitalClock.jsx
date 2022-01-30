@@ -4,20 +4,26 @@ import './DigitalClock.scss';
 export default function DigitalClock () {
 
     const [clockState, setClockState] = useState();
-
     const date = new Date()      
-    let week = ['Lunes','Martes', 'Miercoles', 'jueves', 'Viernes', 'Sàbado','Domingo'];
+    let week = ['Domingo','Lunes','Martes', 'Miercoles', 'jueves', 'Viernes', 'Sàbado'];
     let month = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
      'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     let dayWeek = date.getDay();
     let day = date.getDate();
     let getMonth = date.getMonth();
     let year = date.getFullYear();
-    let hour = date.getHours();
+    let hours = date.getHours();
     let minutes = date.getMinutes();
-    if (minutes < 10) {
-        minutes = '0' + minutes
+    
+    if (hours < 10) {
+        hours = '0' + hours;
     }
+
+    if (minutes < 10) {
+        minutes = '0' + minutes;        
+    }    
+    
+    
     
     useEffect( () => {
         setInterval( () => {
@@ -35,7 +41,7 @@ export default function DigitalClock () {
         <div className="digitalclock">
             <h4 className="digitalclock__title">LED CLOCK</h4>
             <div className="digitalclock__clock">
-            <span>{hour}</span>:<span>{minutes}</span><span className="digitalclock__clock-sec">{clockState}</span>
+            <span>{hours}</span>:<span>{minutes}</span><span className="digitalclock__clock-sec">{clockState}</span>
             </div>
             <div className="digitalclock__info">
                 <div className="digitalclock__info-day" >

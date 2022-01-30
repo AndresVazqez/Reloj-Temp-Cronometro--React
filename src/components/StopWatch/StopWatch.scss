@@ -1,0 +1,52 @@
+.stopwatch {
+    width: 400px;
+    height: 200px;
+    background: #000000da;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    flex-direction: column;
+    border-radius: 25px;
+
+
+    &__span {
+        font-size: 90px;
+        color: yellowgreen;
+        
+    }
+
+    &__button {  
+        &-item {
+            border: none;
+            width: 90px;
+            height: 90px;
+            padding: 15px;
+            margin: 15px 25px;
+            border-radius: 50%;
+            background: rgba(128, 255, 0, 0.26);
+            color: chartreuse;
+            text-align: center;
+
+            &:active {
+                background: rgba(128, 255, 0, 0.39);
+            }            
+        } 
+
+        &-item-stop {
+            color: red;
+            border: none;
+            width: 90px;
+            height: 90px;
+            padding: 15px;
+            margin: 15px 25px;
+            border-radius: 50%;
+            background: rgba(228, 6, 6, 0.26); 
+            
+            &:active {
+                background: rgba(228, 6, 6, 0.397);
+            }
+        }
+    }   
+}

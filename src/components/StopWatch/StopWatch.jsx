@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './StopWatch.scss';
 
 
 const StopWatch = () => {
@@ -24,22 +25,26 @@ const StopWatch = () => {
 
 
     return (
-        <div className="stopwatch">          
+        <div className="stopwatch">
 
-            <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-            <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-            <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+            <div className="stopwatch__span">  
+                <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+                <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+                <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+            </div>
 
-            {!timerOn && time === 0 && (
-                <button className="stopwatch__button" onClick={() => setTimerOn(true)}>Start</button>
-            )}
-            {timerOn && <button className="stopwatch__button" onClick={() => setTimerOn(false)}>Stop</button>}
-            {!timerOn && time > 0 && (
-                <button className="stopwatch__button" onClick={() => setTimerOn(true)}>Resume</button>
-            )}
-            {!timerOn && time > 0 && ( 
-                <button className="stopwatch__button" onClick={() => setTime(0)} >Reset</button>
-            )}  
+            <div className="stopwatch__button" >
+                {!timerOn && time === 0 && (                   
+                    <button className="stopwatch__button-item" onClick={() => setTimerOn(true)}>Start</button>                   
+                )}
+                {timerOn && <button className="stopwatch__button-item-stop" onClick={() => setTimerOn(false)}>Stop</button>}
+                {!timerOn && time > 0 && (
+                    <button className="stopwatch__button-item " onClick={() => setTimerOn(true)}>Resume</button>
+                )}
+                {!timerOn && time > 0 && ( 
+                    <button className="stopwatch__button-item" onClick={() => setTime(0)} >Reset</button>
+                )}  
+            </div> 
         </div>
     )
 } 
