@@ -1,0 +1,115 @@
+@import '../../../../../Index.scss';
+
+.stopwatch {
+    width: 365px;    
+    background: #000000da;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex-direction: column;
+    border-radius: 25px;
+
+    @include desktop {
+
+        width: 400px;
+        height: 200px;
+        background: #000000da;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        flex-direction: column;
+        border-radius: 25px;
+    }
+
+
+    &__span {
+        font-size: 75px;
+        color: rgb(42, 255, 60);
+
+        @include desktop {
+
+            font-size: 90px;
+        }        
+    }
+
+    &__button {      
+
+        &-item {
+            
+            border: none;
+            width: 55px;
+            height: 55px;
+            padding: 0px;
+            margin: 15px 25px;
+            border-radius: 50%;
+            background: rgba(128, 255, 0, 0.26);
+            color: rgb(42, 255, 60);
+            text-align: center;
+            font-size: 10px;
+
+            @include desktop {
+
+                border: none;
+                width: 60px;
+                height: 60px;
+                padding: 0px;
+                margin: 15px 25px;
+                border-radius: 50%;
+                background: rgba(128, 255, 0, 0.26);
+                color: rgb(42, 255, 60);
+                text-align: center;
+                font-size: 10px;
+
+            }
+
+            &:active {
+                background: rgba(128, 255, 0, 0.39);
+            }            
+        } 
+
+        &-item-stop {
+            color: rgb(255, 0, 0);
+            border: none;
+            width: 55px;
+            height: 55px;
+            padding: 0px;
+            margin: 15px 25px;
+            border-radius: 50%;
+            background: rgba(228, 6, 6, 0.26); 
+            animation: stop 3s ease infinite;
+            text-align: center;
+
+
+            @include desktop {                
+                width: 60px;
+                height: 60px;
+                padding: 15px;
+            }
+            
+            &:active {
+                background: rgba(228, 6, 6, 0.397);
+            }
+
+            
+            @keyframes stop { 
+
+                0% {
+
+                    background: rgba(228, 6, 6, 0.26);    
+                } 
+                
+                50% {
+                    background: rgba(228, 6, 6, 0.452); 
+                }
+
+                100% {
+                    background: rgba(228, 6, 6, 0.26); 
+                }
+            }
+        }
+    }   
+}

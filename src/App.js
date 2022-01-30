@@ -1,31 +1,32 @@
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import DigitalClock from './components/DigitalClock/DigitalClock';
-import CountDown from './components/CountDown/CountDown';
-import StopWatch from './components/StopWatch/StopWatch';
+import HomePage from './components/Pages/HomePage/HomePage';
+import Header from './components/Heaader/Header';
+import CountDownPage from './components/Pages/CountDownPage/CountDownPage';
+import StopWatchPage from './components/Pages/StopWatchPage/StopWatchPage';
+import Footer from './components/Footer/Footer';
 
 
 
 function App() {
   return (
 
-
-    <div className="app">
-
-      <div className="app_digitalClock">
-        <DigitalClock/>
-      </div>
-
-      <div className="app_countDown">
-        <CountDown/>
-      </div>
-
-      <div className="app_StopWatch">
-        <StopWatch/>
-      </div>
-         
-            
-    </div>
+    <BrowserRouter>
+        <Header>
+            <Header/>
+        </Header>
+        <Routes>
+            <Route path='/'>
+              <Route index element={<HomePage/>}/>
+              <Route path="countdown" element={<CountDownPage/>}/>
+              <Route path="stopwatch" element={<StopWatchPage/>}/>
+              <Route path="*" element={<h1>There is nothing here...</h1>}/>              
+            </Route>
+        </Routes>
+        <Footer>
+          <Footer/>          
+        </Footer>     
+    </BrowserRouter>
   );
 }
 

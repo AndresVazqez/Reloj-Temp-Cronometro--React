@@ -20,10 +20,9 @@ export default function DigitalClock () {
     }
 
     if (minutes < 10) {
-        minutes = '0' + minutes;        
+        minutes = '0' + minutes; 
     }    
-    
-    
+        
     
     useEffect( () => {
         setInterval( () => {
@@ -38,8 +37,8 @@ export default function DigitalClock () {
 
     
     return (
-        <div className="digitalclock">
-            <h4 className="digitalclock__title">LED CLOCK</h4>
+        <div className="digitalclock animation">
+            <h4 className="digitalclock__title">RGB CLOCK</h4>
             <div className="digitalclock__clock">
             <span>{hours}</span>:<span>{minutes}</span><span className="digitalclock__clock-sec">{clockState}</span>
             </div>

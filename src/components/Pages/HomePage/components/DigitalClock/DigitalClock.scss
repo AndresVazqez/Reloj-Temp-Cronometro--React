@@ -9,7 +9,11 @@
     flex-direction: column;
     padding: calc(20px + 1vw);   
     color: rgb(42, 255, 60);
-    //border: 0.2vw solid rgb(42, 255, 60);
+    border: 0.4vw solid;
+    position: relative;     
+    animation: gradient 7s ease infinite alternate-reverse;  
+   
+
 
     &__title {
         color:grey;        
@@ -62,4 +66,22 @@
             width: 30%;                       
         }        
     }
+
+    @keyframes gradient {
+        0% {
+            border-color:blue;
+            box-shadow: 0vw 0vw 0.8vw rgb(0, 0, 255);                   
+        }
+        50% {
+            border-color: red;
+            box-shadow: 0vw 0vw 0.8vw rgb(255, 0, 0);           
+        }
+        100% {
+            border-color: rgb(42, 255, 60);
+            box-shadow: 0vw 0vw 0.8vw rgb(42, 255, 60);           
+        }      
+    }
 }
+
+
+
