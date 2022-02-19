@@ -8,7 +8,7 @@
     margin: 50px;
     flex-direction: column;
     padding: calc(20px + 1vw);   
-    color: rgb(42, 255, 60);
+    color: rgb(42, 255, 60);    
     border: 0.4vw solid;
     position: relative;     
     animation: gradient 7s ease infinite alternate-reverse;  
@@ -27,6 +27,7 @@
         text-align: center;
         font-size: 15vw;
         margin: 0px;
+        //text-shadow: 0vw 0vw 1.5vw rgb(42, 255, 60);
 
         &-sec {
             font-size: 6vw;

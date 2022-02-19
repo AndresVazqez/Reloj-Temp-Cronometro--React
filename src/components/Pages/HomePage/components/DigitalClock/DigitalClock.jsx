@@ -5,7 +5,7 @@ export default function DigitalClock () {
 
     const [clockState, setClockState] = useState();
     const date = new Date()      
-    let week = ['Domingo','Lunes','Martes', 'Miercoles', 'jueves', 'Viernes', 'Sàbado'];
+    let week = ['Domingo','Lunes','Martes', 'Miercoles', 'jueves', 'Viernes', 'Sábado'];
     let month = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
      'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     let dayWeek = date.getDay();
